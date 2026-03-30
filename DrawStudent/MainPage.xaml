@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DrawStudent.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label Text="Podaj klasę:" />
+            <Entry x:Name="classEntry" Placeholder="np. 4F" />
+
+            <Label Text="Lista uczniów (każdy uczeń w osobnej linijce):" />
+            <Editor x:Name="studentsEditor" HeightRequest="200" Placeholder="Jakub Baryła&#10;Jan Kowalski&#10;Itd." />
+
+            <Button Text="Zapisz klasę" Clicked="OnSaveClicked" />
+            <Button Text="Wczytaj klasę" Clicked="OnLoadClicked" />
+            <Button Text="Losuj ucznia" Clicked="OnDrawClicked" />
+            <Button Text="Wyczyść dane" Clicked="OnClearClicked" />
+
+            <Label x:Name="resultLabel" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
